@@ -43,8 +43,21 @@ h3{
   }
   
 
-  
-  .imageContainer:hover::before {
+
+  #eyeIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px; /* Adjust size as needed */
+    color: white;
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+.imageContainer:hover #eyeIcon {
+    opacity: 1; /* Show on hover */
+}
+.imageContainer:hover::before {
     content: '';
     position: absolute;
     top: 0;
@@ -53,8 +66,12 @@ h3{
     height: 100%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(4, 188, 244, 0.5)); /* Light gradient overlay */
     border-radius: 10px;
-    z-index: 99;
-  }
+    z-index: 0; /* Ensure overlay is behind the icon */
+}
+
+#eyeIcon {
+    z-index: 1; /* Ensure icon is on top of overlay */
+}
 p{
     padding-inline: 10px;
     color: gray;
