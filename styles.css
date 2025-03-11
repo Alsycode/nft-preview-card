@@ -18,7 +18,10 @@
 }
 h3{
     padding-inline: 10px;
-    color: cyan;
+    color: white;
+}
+h3:hover {
+    color:cyan;
 }
 #card {
     max-width: 400px;
@@ -109,6 +112,10 @@ p{
     color: white;
 
 }
+.authorName:hover {
+    color: cyan;
+}
+
 .created{
     color: gray;
 }
